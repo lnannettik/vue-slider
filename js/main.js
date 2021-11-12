@@ -35,9 +35,61 @@ const app = new Vue ({
                 title:
                     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             },
-        ]
+        ],
+        activeSlide: 0,
     },
 
-    methods: {}
+    methods: {
+
+        // prevSlide
+        prevSlide() {
+            this.activeSlide--;
+
+            if(this.activeSlide < 0) {
+                this.activeSlide = this.slides.length - 1;
+            }
+        },
     
+
+        // next Slide
+        nextSlide() {
+            this.activeSlide++;
+
+            if(this.activeSlide > this.slides.length - 1) {
+                this.activeSlide = 0;
+            }
+        },
+
+
+        // set Slide by click
+        setSlide(slideIndex) {
+            // console.log(`check ${slideIndex}`);
+            this.activeSlide = slideIndex;
+
+        },
+
+
+        //         Bonus
+        // Applicare l’autoplay allo slider: ogni 3 secondi cambia immagine automaticamente.
+
+        // timer 30 sec
+        // let second = 5; // 
+
+
+        setInterval (() => {
+
+            // se il timer arriva a 0 fermati
+            if(second === 0) {
+                // stop the count
+                clearInterval(timer)
+
+            } else {
+                // sottrai 1 a second
+                second--;
+            }     
+            
+        }, 3000)}
+
+
+    }
 });
