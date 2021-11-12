@@ -76,19 +76,19 @@ const app = new Vue ({
         // let second = 5; // 
 
 
-        setInterval (() => {
+        // setInterval (() => {
 
-            // se il timer arriva a 0 fermati
-            if(second === 0) {
-                // stop the count
-                clearInterval(timer)
+        //     // se il timer arriva a 0 fermati
+        //     if(second === 0) {
+        //         // stop the count
+        //         clearInterval(timer)
 
-            } else {
-                // sottrai 1 a second
-                second--;
-            }     
+        //     } else {
+        //         // sottrai 1 a second
+        //         second--;
+        //     }     
             
-        }, 3000)}
+        // }, 3000)}
 
 
     }
